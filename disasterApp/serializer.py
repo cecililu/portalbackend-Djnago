@@ -8,7 +8,7 @@ class LocalSerializer( GeoFeatureModelSerializer):
         fields='__all__'
      
 class DisasterSerializer( GeoFeatureModelSerializer):
-    
+    municipality=LocalSerializer
     class Meta:
         model = Disaster
         fields = "__all__"
