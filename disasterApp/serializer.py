@@ -12,7 +12,7 @@ class LocalSerializerWithoutGeom(serializers.ModelSerializer):
     class  Meta:
         model=Local
         fields=['pr_name', 'local', 'type']
-          
+    
 class DisasterSerializer( GeoFeatureModelSerializer):
     municipality=LocalSerializerWithoutGeom()
     class Meta:
