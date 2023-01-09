@@ -9,5 +9,5 @@ router.register('disaster',DiasterView )
 router.register('locals',LocalsView)
 
 urlpatterns = [    
-    path('/api/',include(routers.urls)),
+    path('api',include(router.urls)),
 ]

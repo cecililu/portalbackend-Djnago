@@ -4,11 +4,11 @@ from disasterApp.models import *
 from disasterApp.serializer import *
 
 
-class DiasterView(viewsets.ViewSet):
+class DiasterView(viewsets.ModelViewSet):
         queryset = Disaster.objects.all()
         serializer_class = DisasterSerializer
 
-class LocalsView(viewsets.ViewSet):
+class LocalsView(viewsets.ModelViewSet):
         queryset =Local.objects.all()
         serializer_class = LocalSerializer
    
