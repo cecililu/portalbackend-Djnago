@@ -25,7 +25,7 @@ class DisasterWardWise(generics.ListAPIView):
         queryset=Disaster.objects.all()
         serializer_class=DisasterSerializer
         filter_backends=[filters.DjangoFilterBackend,rest_filters.SearchFilter]
-        filterset_fields = ['municipality','name']
-        search_fields = ['name']
+        filterset_fields = ['municipality__local','name']
+        search_fields = ['name','municipality__local']
         # filterset_class = NameFilter
         
