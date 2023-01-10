@@ -37,11 +37,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'django_filters',
     'django.contrib.gis',
     'rest_framework',
     'rest_framework_gis',
     'disasterApp',
-    'django_filters'
+     
   
 ]
 
