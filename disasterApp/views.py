@@ -14,20 +14,13 @@ class LocalsView(viewsets.ModelViewSet):
         queryset =Local.objects.all()
         serializer_class = LocalSerializer
 
-#   filterclass
-# class NameFilter(filters.FilterSet):
-#     name = filters.CharFilter(field_name='name',lookup_expr='^name')
-#     class Meta:
-#         model = Disaster
-#         fields = ['name']    
+
               
 class DisasterWardWise(generics.ListAPIView):
-        queryset=Disaster.objects.all()
+        queryset=DisasterEvent.objects.all()
         serializer_class=DisasterSerializer
         filter_backends=[filters.DjangoFilterBackend,rest_filters.SearchFilter,rest_filters.OrderingFilter]
         filterset_fields = ['municipality__local','name']
         search_fields = ['name','municipality__local']
-        ordering_fields=['name','municipality__local','date']
-        
-        # filterset_class = NameFilter
+        ordering_fields=['name','municipality__local']
         
