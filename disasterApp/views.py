@@ -7,7 +7,7 @@ from disasterApp.serializer import *
 from django_filters import rest_framework as filters
 
 class DiasterView(viewsets.ModelViewSet):
-        queryset = Disaster.objects.all()
+        queryset = DisasterEvent.objects.all()
         serializer_class = DisasterSerializer
 
 class LocalsView(viewsets.ModelViewSet):

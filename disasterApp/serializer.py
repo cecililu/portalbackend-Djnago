@@ -16,6 +16,6 @@ class LocalSerializerWithoutGeom(serializers.ModelSerializer):
 class DisasterSerializer( GeoFeatureModelSerializer):
     municipality=LocalSerializerWithoutGeom()
     class Meta:
-        model = Disaster
+        model = DisasterEvent
         geo_field='geom'
         fields = "__all__"

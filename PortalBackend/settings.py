@@ -83,7 +83,7 @@ WSGI_APPLICATION = "PortalBackend.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'disaster2',
+        'NAME': 'portal',
         'USER': 'postgres',
         "PASSWORD":'cecil'
     },
