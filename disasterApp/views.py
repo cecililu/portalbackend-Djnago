@@ -24,8 +24,10 @@ class LocalsView(viewsets.ModelViewSet):
 class DisasterWardWise(generics.ListAPIView):
         queryset=Disaster.objects.all()
         serializer_class=DisasterSerializer
-        filter_backends=[filters.DjangoFilterBackend,rest_filters.SearchFilter]
+        filter_backends=[filters.DjangoFilterBackend,rest_filters.SearchFilter,rest_filters.OrderingFilter]
         filterset_fields = ['municipality__local','name']
         search_fields = ['name','municipality__local']
+        ordering_fields=['name','municipality__local','date']
+        
         # filterset_class = NameFilter
         
