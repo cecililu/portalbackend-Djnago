@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.gis',
     'rest_framework',
     'rest_framework_gis',
+    'accounts',
     'disasterApp',
      
   
@@ -137,3 +138,5 @@ REST_FRAMEWORK = {
        
     ),
 }
+
+AUTH_USER_MODEL='accounts.User'
