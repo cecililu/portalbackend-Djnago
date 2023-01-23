@@ -1,7 +1,5 @@
-
 from django.contrib.gis.db import models
 # models.Manager
-
 class Local(models.Model):
     province = models.BigIntegerField()
     pr_name = models.CharField(max_length=50)
@@ -13,7 +11,24 @@ class Local(models.Model):
     def __str__(self):
         return self.local 
 
+class Ward(models.Model):
+    province = models.BigIntegerField()
+    district = models.CharField(max_length=50)
+    palika = models.CharField(max_length=50)
+    type = models.CharField(max_length=50)
+    ward = models.BigIntegerField()
+    local = models.ForeignKey(Local, on_delete=models.CASCADE)
+    geom = models.MultiPolygonField(srid=4326)
 
+# Auto-generated `LayerMapping` dictionary for Ward model
+# ward_mapping = {
+#     'province': 'PROVINCE',
+#     'district': 'DISTRICT',
+#     'palika': 'PALIKA',
+#     'type': 'TYPE',
+#     'ward': 'WARD',
+#     'geom': 'MULTIPOLYGON',
+# }
 from django.utils import timezone
 
 class Disaster(models.Model):

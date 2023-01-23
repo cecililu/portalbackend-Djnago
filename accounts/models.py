@@ -9,6 +9,3 @@ class User(AbstractUser):
     is_Municipality=models.BooleanField(default=False)  
     is_Ward=models.BooleanField(default=False) 
     is_cluster=models.BooleanField(default=False) 
-      
-    
-    

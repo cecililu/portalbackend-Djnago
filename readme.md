@@ -23,8 +23,15 @@
 #     'local': 'LOCAL',
 #     'type': 'TYPE',
 #     'geom': 'MULTIPOLYGON',
-# }
 
+# }
+for--
+
+municipality_mapping = {
+    'palika': 'PALIKA',
+    'geom': 'MULTIPOLYGON',
+}
+---
 #copy model into the model.py -and then migrate
 #now database table is set up according to the shp provide earlier in ogrinspect
 #to load data in database from shp follow step 2
