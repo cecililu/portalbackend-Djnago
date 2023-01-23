@@ -60,7 +60,7 @@ class Myadmin(UserAdmin):
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ( 'password1', 'password2','username','is_staff'),
+            'fields': ('password','username','is_staff','name','isCDO','is_cluster',"ward",'Municipality'),
         }),
     )
     

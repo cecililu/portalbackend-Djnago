@@ -5,8 +5,7 @@ class Municipality(models.Model):
     geom = models.MultiPolygonField(srid=4326)
     def __str__(self):
         return str(self.palika) 
-    
-    
+     
 class Ward(models.Model):
     province = models.BigIntegerField()
     district = models.CharField(max_length=50)
